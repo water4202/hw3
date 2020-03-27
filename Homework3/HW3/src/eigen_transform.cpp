@@ -64,7 +64,7 @@ int main(int argc, char **argv)
                   << ", yaw(Z): " << euler_tmp_deg.z() << std::endl;
 
         // Apply rotation to point with quaternion
-	world_point = Q_tmp.toRotationMatrix() * world_point;
+	world_point = Q_tmp * world_point;
 	/*Eigen::Quaterniond P;
 	P.w() = 0;
 	P.vec() = world_point;
